@@ -1,0 +1,57 @@
+# Your real layout for the CH57x macropad (USB 1189:8840, model ch57x-1).
+# This file is the SOLE source of truth — the tool cannot read the map back
+# off the device. Edit here, then:
+#   ./ch57x-keyboard-tool validate your-config.yaml
+#   ./ch57x-keyboard-tool upload   your-config.yaml   (may need sudo)
+#
+# See doc/actions.md for all available actions.
+
+model: ch57x-1
+
+# Buttons on the left, knobs on the right.
+orientation: normal
+rows: 3
+columns: 4
+knobs: 2
+
+layers:
+  # ---- Layer 1: everyday editing shortcuts ----
+  - buttons:
+      - ["ctrl-c", "ctrl-v", "ctrl-x", "ctrl-z"]      # copy, paste, cut, undo
+      - ["ctrl-a", "ctrl-s", "ctrl-f", "ctrl-shift-z"] # select-all, save, find, redo
+      - ["ctrl-t", "ctrl-w", "alt-tab", "ctrl-shift-t"] # new tab, close, switch, reopen tab
+    knobs:
+      # Top knob: volume
+      - ccw: "volumedown"
+        press: "mute"
+        cw: "volumeup"
+      # Bottom knob: scroll wheel
+      - ccw: "wheeldown"
+        press: "click"
+        cw: "wheelup"
+
+  # ---- Layer 2: function keys ----
+  - buttons:
+      - ["f1", "f2", "f3", "f4"]
+      - ["f5", "f6", "f7", "f8"]
+      - ["f9", "f10", "f11", "f12"]
+    knobs:
+      - ccw: "volumedown"
+        press: "mute"
+        cw: "volumeup"
+      - ccw: "wheeldown"
+        press: "click"
+        cw: "wheelup"
+
+  # ---- Layer 3: numpad + media ----
+  - buttons:
+      - ["7", "8", "9", "play"]
+      - ["4", "5", "6", "prev"]
+      - ["1", "2", "3", "next"]
+    knobs:
+      - ccw: "volumedown"
+        press: "mute"
+        cw: "volumeup"
+      - ccw: "wheeldown"
+        press: "click"
+        cw: "wheelup"

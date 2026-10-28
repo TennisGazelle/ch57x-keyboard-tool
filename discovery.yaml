@@ -1,0 +1,48 @@
+# Probe map for the 12-key + 2-knob pad (USB 1189:8840).
+# Unique key per control so you can press/turn and see which YAML cell it is.
+# Orientation: knobs on the right, keys on the left.
+# After upload, press keys left→right, top→bottom and write what each cell types.
+
+model: ch57x-1
+orientation: normal
+rows: 3
+columns: 4
+knobs: 2
+
+layers:
+  - buttons:
+      - ["q", "w", "e", "r"]
+      - ["a", "s", "d", "f"]
+      - ["z", "x", "c", "v"]
+    knobs:
+      - ccw: "1"
+        press: "2"
+        cw: "3"
+      - ccw: "4"
+        press: "5"
+        cw: "6"
+
+  # Side layer button. Same idea, F-keys so it is obvious you changed layer.
+  - buttons:
+      - ["f1", "f2", "f3", "f4"]
+      - ["f5", "f6", "f7", "f8"]
+      - ["f9", "f10", "f11", "f12"]
+    knobs:
+      - ccw: "left"
+        press: "enter"
+        cw: "right"
+      - ccw: "up"
+        press: "space"
+        cw: "down"
+
+  - buttons:
+      - ["n", "m", "comma", "dot"]
+      - ["j", "k", "l", "p"]
+      - ["u", "i", "o", "y"]
+    knobs:
+      - ccw: "volumedown"
+        press: "mute"
+        cw: "volumeup"
+      - ccw: "prev"
+        press: "play"
+        cw: "next"

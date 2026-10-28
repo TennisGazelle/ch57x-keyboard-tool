@@ -1,0 +1,2 @@
+# 1189:8840 CH57x 12-key + 2-knob pad (programming interface)
+SUBSYSTEM=="usb", ATTR{idVendor}=="1189", ATTR{idProduct}=="8840", TAG+="uaccess"

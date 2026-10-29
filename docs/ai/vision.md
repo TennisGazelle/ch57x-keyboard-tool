@@ -17,7 +17,7 @@ a host daemon).
 | Control | Intended action | Blocker / status |
 |---------|-----------------|------------------|
 | A pad key | Open Slack | Needs a host daemon bind and a launch command. Not built. |
-| Second knob (bottom) | Dim WiZ lights | ccw = dim down, cw = dim up, press = toggle. Needs WiZ control (script or microservice). Repo not confirmed yet. |
+| Far-right column | Dim WiZ lights | BUILT on host `daniell-ubuntu-dellpromax`. Brighter/toggle/softer plus always-on/off via GNOME shortcuts. See [wiz-lights.md](wiz-lights.md). Not built on other machines. |
 
 ## Order of work (per action)
 
@@ -34,3 +34,6 @@ a host daemon).
 - The WiZ knob reuses the bottom knob. The bottom knob is scroll today. Put the
   WiZ binds on a non-default layer so scroll stays on Layer 1.
 - The host daemon must exist on every machine that fronts the KVM.
+- WiZ control is ready. The host command for dim-down is
+  `wizlight brightness 10.0.0.30 <n>`. See [wiz-lights.md](wiz-lights.md) for
+  the bulb inventory and the discovery fix.

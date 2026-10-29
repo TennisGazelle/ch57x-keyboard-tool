@@ -25,33 +25,40 @@ layers:
       - ccw: "volumedown"
         press: "mute"
         cw: "volumeup"
-      # Bottom knob: scroll wheel
-      - ccw: "wheeldown"
-        press: "click"
-        cw: "wheelup"
+      # Bottom knob: bedroom_lights_dimmer
+      - ccw: "f16"
+        press: "f15"
+        cw: "f14"
 
-  # ---- Layer 2: function keys ----
+  # ---- Layer 2: WiZ light control (via host daemon on safe F-codes) ----
+  # Far-right column = single-value dimmer. Far-left column = full on/off.
+  # Only f14-f18 are used: they map to inert XF86Launch5-9 on this machine.
+  # f13 fillers are unassigned placeholders. See docs/ai/wiz-lights.md.
   - buttons:
-      - ["f1", "f2", "f3", "f4"]
-      - ["f5", "f6", "f7", "f8"]
-      - ["f9", "f10", "f11", "f12"]
+      - ["f17", "f13", "f13", "f14"]   # always-on | - | - | BRIGHTER (top-right)
+      - ["f13", "f13", "f13", "f15"]   #    -      | - | - | TOGGLE on/off (mid-right)
+      - ["f18", "f13", "f13", "f16"]   # always-off| - | - | SOFTER (bottom-right)
     knobs:
+      # Top knob: volume
       - ccw: "volumedown"
         press: "mute"
         cw: "volumeup"
-      - ccw: "wheeldown"
-        press: "click"
-        cw: "wheelup"
+      # Bottom knob: bedroom_lights_dimmer
+      - ccw: "f16"
+        press: "f15"
+        cw: "f14"
 
   # ---- Layer 3: numpad + media ----
   - buttons:
-      - ["7", "8", "9", "play"]
-      - ["4", "5", "6", "prev"]
+      - ["7", "8", "9", "prev"]
+      - ["4", "5", "6", "play"]
       - ["1", "2", "3", "next"]
     knobs:
+      # Top knob: volume
       - ccw: "volumedown"
         press: "mute"
         cw: "volumeup"
-      - ccw: "wheeldown"
-        press: "click"
-        cw: "wheelup"
+      # Bottom knob: bedroom_lights_dimmer
+      - ccw: "f16"
+        press: "f15"
+        cw: "f14"

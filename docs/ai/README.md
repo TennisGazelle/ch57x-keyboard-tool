@@ -18,6 +18,7 @@ spoke. Do not read the whole repo.
 | Flash the device | [macropad.md](macropad.md) | run `upload` (needs sudo) |
 | Find which cell a key is | [macropad.md](macropad.md) | `discovery.yaml` |
 | Future intent (not built) | [vision.md](vision.md) | — |
+| Control WiZ lights / fix discovery | [wiz-lights.md](wiz-lights.md) | — |
 | Rules for agents | [rules.md](rules.md) | — |
 
 ## Quick facts
